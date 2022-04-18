@@ -1,5 +1,4 @@
-(defmacro new (class &body cons-args)
-  "(new class (key . val)*)"
+(defun new (class &rest cons-args)
   (let ((this (make-instance class)))
     (map nil
          (lambda (cons-arg)
